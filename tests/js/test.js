@@ -1,3 +1,33 @@
+` use strict `;
+let nombre = prompt("Entrez une valeur");
+nombre = nombre * 2;
+console.log(`valeur*2 = ${nombre}`);
+console.warn("Attention, ceci est un message d'avertissement");
+console.error("Ceci est un message d'erreur");
+console.info("Ceci est un message d'information");
+console.log("Ceci est un message de log");
+
+const tab1 = [23, 25, 28];
+const tab2 = [12, 15, 18];
+const findMax = (tab, taille) => {
+  let max = tab[0];
+  for (let i = 1; i < taille; i++) {
+    if (tab[i] > max) {
+      max = tab[i];
+    }
+  }
+  return max;
+};
+const afficheTemp = (tab) => {
+  for (let i in tab) {
+    let tempMax = findMax(tab, Number(i) + 1);
+    console.log(`${tempMax}°C in ${i} days`);
+  }
+};
+
+afficheTemp(tab1);
+afficheTemp(tab2);
+
 let tagH1 = document.querySelector("header h1");
 tagH1.innerHTML = "Bonjour";
 const canvas = document.getElementById("animationCanvas");
