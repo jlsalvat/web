@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug script.js en mode --jitless",
+      "program": "${workspaceFolder}/js/script.js",
+      "runtimeArgs": ["--jitless"],
+      "skipFiles": ["<node_internals>/**"]
+    }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Open file",
+      "program": "${file}",
+      "skipFiles": ["<node_internals>/**"]
+    }
+
+  ]
+}

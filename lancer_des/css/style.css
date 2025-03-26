@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+body {
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    rgb(233, 84, 46) 0%,
+    rgb(166, 61, 152) 100%
+  );
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  /* flex: 1; */
+  /* align-items: center; */
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0px 0px 37px -3px rgba(34, 42, 54, 0.89);
+}
+#left,
+#right {
+  margin: 5px;
+  background-color: rgb(159, 76, 152);
+  width: 400px;
+
+  align-content: center;
+  text-align: center;
+  border-radius: 30px;
+  /* flex: 1; */
+  /* padding: 20px; */
+}
+
+p {
+  font-size: 1.5em;
+}
+p.total {
+  font-size: 2em;
+  color: rgb(97, 212, 35);
+}
+p.player {
+  font-size: 2em;
+}
+.display-zone {
+  margin: 30px 120px 30px 120px;
+  background-color: rgb(208, 96, 96);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.centre {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  font-size: 1.3em;
+}
+button {
+  background-color: rgba(201, 218, 192, 0.748);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin: 10px;
+}
+button:hover {
+  background-color: rgba(201, 218, 192, 0.9);
+}
+#new {
+  top: 5px;
+}
+#dice {
+  bottom: 140px;
+}
+#roll {
+  bottom: 70px;
+}
+#hold {
+  bottom: 10px;
+}
