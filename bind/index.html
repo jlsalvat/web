@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>A Closer Look at Functions</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         height: 100vh;
         display: flex;
@@ -34,12 +39,57 @@
       .poll {
         right: 2rem;
       }
+      .hidden {
+        display: none;
+      }
+      .fen-question {
+        font-size: 1.6rem;
+        margin: 1rem 2rem;
+        padding: 10px;
+        position: flex;
+        justify-content: space-between;
+        top: 30px;
+        left: 30px; /* Correction ici */
+        min-width: 500px;
+        border: black 1px solid;
+        background-color: white;
+        border-radius: 20px;
+        position: absolute; /* Ajouté */
+      }
+      .question {
+        max-width: 400px;
+        font-size: 1.6rem;
+        padding: 10px;
+        margin: 10px;
+        background-color: antiquewhite;
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      legend {
+        background-color: #000;
+        color: #fff;
+        padding: 3px 6px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <h1>A Closer Look at Functions</h1>
     <button class="buy">Buy new plane 🛩</button>
     <button class="poll">Answer poll ⁉️</button>
-    <script src="script.js"></script>
+    <form class="fen-question hidden">
+      <p class="question"></p>
+      <img src="close.png" width="75px" alt="close" class="close" />
+      <fieldset>
+        <legend style="font-size: 0.8em">
+          choisir une réponse puis fermer la fenêtre:
+        </legend>
+      </fieldset>
+    </form>
+    <script src="./script.js"></script>
   </body>
 </html>

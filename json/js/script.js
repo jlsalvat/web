@@ -465,3 +465,97 @@ function upperFirstWord(str) {
   return [firstWord.toUpperCase(), ...otherWords].join(" ");
 }
 console.log(upperFirstWord("this is a test"));
+console.log("***************");
+(function () {
+  console.log("IIFE");
+})();
+(() => console.log("IIFE"))();
+
+console.log("***************");
+//variables locales
+const secureBooking1 = function () {
+  let cpt = 0;
+  cpt++;
+  console.log(`cpt : ${cpt}`);
+};
+secureBooking1();
+secureBooking1();
+
+//le délire (closure ?)
+const secondBooking2 = function () {
+  let cpt = 0;
+  return function () {
+    cpt++;
+    console.log(`cpt : ${cpt}`);
+  };
+};
+const booking = secondBooking2();
+booking();
+booking();
+console.log("***************");
+const array = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+array.forEach(function (element) {
+  if (element > 5) console.log(element);
+});
+for (const element of array) {
+  if (element > 5) console.log(element);
+}
+console.log("avec l'indice");
+for (const [i, element] of array.entries()) {
+  if (element > 5) console.log(i, element);
+}
+for (let i = 0; i < array.length; i++) {
+  if (array[i] > 5) console.log(array[i]);
+}
+console.log("***************");
+const currencies = new Map([
+  ["USD", "United States dollar"],
+  ["EUR", "Euro"],
+  ["GBP", "Pound sterling"],
+]);
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+const toto = new Set(["toto", "tata", "titi", "toto", 3, 4, 3]);
+toto.forEach(function (value) {
+  console.log(`${value}`);
+});
+console.log(" creation d'un objet 2 solutions");
+const Car1 = function (marque, vitesse) {
+  this.marque = marque;
+  this.vitesse = vitesse;
+};
+Car1.prototype.accelere = function () {
+  this.vitesse++;
+};
+Car1.prototype.print = function () {
+  console.log(`la ${this.marque} roule à ${this.vitesse}`);
+};
+class Car {
+  constructor(marque, vitesse) {
+    this.marque = marque;
+    this.vitesse = vitesse;
+  }
+  accelere() {
+    this.vitesse++;
+  }
+  print() {
+    console.log(`la ${this.marque} roule à ${this.vitesse}`);
+  }
+  arret() {
+    this.vitesse = 0;
+  }
+  get kmToMiles() {
+    return 1.6 * this.vitesse;
+  }
+  set kmToMiles(vit) {
+    this.vitesse = vit / 1.6;
+  }
+}
+const maVoiture1 = new Car1("sandero", 200);
+maVoiture1.print();
+console.dir(maVoiture1);
+const maVoiture = new Car("sandero", 200);
+maVoiture.print();
+console.dir(maVoiture);
+console.log(`vitesse en miles/h : ${maVoiture.kmToMiles}`);

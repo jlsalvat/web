@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Log in to get started</h2>
+      <div class="login">
+        <input type="text" placeholder="User" id="user" />
+        <input type="password" placeholder="PIN" id="pin" />
+        <button id="login-btn">→</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="balance">
+        <h3>Current balance</h3>
+        <p>As of <span id="date">05/03/2037</span></p>
+        <h1 id="balance-amount">0000€</h1>
+      </section>
+
+      <section class="transactions">
+        <div class="transaction deposit">
+          <span>2 DEPOSIT</span>
+          <span>3 DAYS AGO</span>
+          <span>4000€</span>
+        </div>
+        <div class="transaction withdrawal">
+          <span>1 WITHDRAWAL</span>
+          <span>24/01/2037</span>
+          <span>-378€</span>
+        </div>
+      </section>
+
+      <section class="actions">
+        <div class="close-account">
+          <h4>Close account</h4>
+          <input type="text" placeholder="Confirm user" />
+          <input type="password" placeholder="Confirm PIN" />
+          <button>→</button>
+        </div>
+        <div class="transfer-money">
+          <h4>Transfer money</h4>
+          <input type="text" placeholder="Transfer to" />
+          <input type="number" placeholder="Amount" />
+          <button>→</button>
+        </div>
+        <div class="request-loan">
+          <h4>Request loan</h4>
+          <input type="number" placeholder="Amount" />
+          <button>→</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
